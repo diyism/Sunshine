@@ -4,6 +4,8 @@
     $ printf '\nsystem_tray = disabled\n' >> ~/.config/sunshine/sunshine.conf
     $ ./sunshine.AppImage
 
+    $ bt300 x86 glasses moonlight client: https://apt.izzysoft.de/fdroid/index/apk/com.limelight?repo=main
+
 <div align="center">
   <img src="sunshine.png"  alt="Sunshine icon"/>
   <h1 align="center">Sunshine</h1>
