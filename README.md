@@ -1,3 +1,9 @@
+    $ wget https://github.com/LizardByte/Sunshine/releases/download/v2026.611.125516/sunshine.AppImage
+    $ chmod +x sunshine.AppImage
+    $ ./sunshine.AppImage            #maybe error about system menu
+    $ printf '\nsystem_tray = disabled\n' >> ~/.config/sunshine/sunshine.conf
+    $ ./sunshine.AppImage
+
 <div align="center">
   <img src="sunshine.png"  alt="Sunshine icon"/>
   <h1 align="center">Sunshine</h1>
