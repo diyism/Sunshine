@@ -4,6 +4,8 @@
     $ printf '\nsystem_tray = disabled\n' >> ~/.config/sunshine/sunshine.conf
     $ ./sunshine.AppImage
 
+    web ui: http://127.0.0.1:47990
+
     $ bt300 x86 glasses moonlight client: https://apt.izzysoft.de/fdroid/index/apk/com.limelight?repo=main
 
 <div align="center">
