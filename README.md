@@ -2,7 +2,11 @@
     $ chmod +x sunshine.AppImage
     $ ./sunshine.AppImage            #maybe error about system menu
     $ printf '\nsystem_tray = disabled\n' >> ~/.config/sunshine/sunshine.conf
-    $ ./sunshine.AppImage
+    $ sudo install ./sunshine.AppImage /usr/bin/sunshine
+    $ env DISPLAY=:0 PULSE_SERVER=unix:/run/user/1000/pulse/native sunshine      #pulse_server for audio
+
+    loop forever in /etc/rc.local:
+    while true; do nohup sudo -u i_m_diyism env DISPLAY=:0 PULSE_SERVER=unix:/run/user/1000/pulse/native sunshine >/dev/null 2>&1; sleep 1; done &
 
     web ui: http://127.0.0.1:47990
 
