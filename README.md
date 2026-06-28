@@ -9,6 +9,7 @@
     while true; do nohup sudo -u i_m_diyism env DISPLAY=:0 PULSE_SERVER=unix:/run/user/1000/pulse/native sunshine >/dev/null 2>&1; sleep 1; done &
 
     web ui: http://127.0.0.1:47990
+    set user: sunshine    pass: Dcba...
 
     $ bt300 x86 glasses moonlight client: https://apt.izzysoft.de/fdroid/index/apk/com.limelight?repo=main
 
