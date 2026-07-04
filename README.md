@@ -21,7 +21,17 @@
     $ wget https://github.com/LizardByte/Sunshine/releases/download/v2026.516.143833/sunshine-debian-trixie-arm64.deb
     $ sudo apt install ./sunshine-*-arm64.deb
     $ nohup sunshine >/dev/null 2>&1 &
+
+    problem about client failing to connect sunshine, sunshine log show can't found encoder:
     open "https://127.0.0.1:47990/config", click "Advanced",  change "Force a Specific Capture Method" to "X11", click "Save", click "Apply"
+
+    problem about client mouse failing to control target desktop, in sunshine server:
+    $ sudo tee /etc/udev/rules.d/60-sunshine-input.rules > /dev/null <<EOF
+    KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
+    EOF
+    $ sudo udevadm control --reload-rules && sudo udevadm trigger
+    restart sunshine, if the upper doesn't work, you need do:
+    $ sudo reboot
 
 <div align="center">
   <img src="sunshine.png"  alt="Sunshine icon"/>
