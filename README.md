@@ -17,7 +17,7 @@
 
     $ bt300 x86 glasses moonlight client: https://apt.izzysoft.de/fdroid/index/apk/com.limelight?repo=main
 
-    on rock64 armbian:
+    on rock64 armbian sunshine server:
     $ wget https://github.com/LizardByte/Sunshine/releases/download/v2026.516.143833/sunshine-debian-trixie-arm64.deb
     $ sudo apt install ./sunshine-*-arm64.deb
     $ nohup sunshine >/dev/null 2>&1 &
@@ -32,6 +32,13 @@
     $ sudo udevadm control --reload-rules && sudo udevadm trigger
     restart sunshine, if the upper doesn't work, you need do:
     $ sudo reboot
+
+    on x64 debian moonlight client:
+    $ wget https://github.com/moonlight-stream/moonlight-qt/releases/download/v6.1.0/Moonlight-6.1.0-x86_64.AppImage
+    $ sudo install Moonlight-6.1.0-x86_64.AppImage /usr/bin/moonlight
+    $ moonlight
+    Connect to rock64 armbian sunshine server,
+    Ctrl+Alt+Shift+Q to quit
 
 <div align="center">
   <img src="sunshine.png"  alt="Sunshine icon"/>
