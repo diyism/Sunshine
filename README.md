@@ -17,6 +17,12 @@
 
     $ bt300 x86 glasses moonlight client: https://apt.izzysoft.de/fdroid/index/apk/com.limelight?repo=main
 
+    on rock64 armbian:
+    $ wget https://github.com/LizardByte/Sunshine/releases/download/v2026.516.143833/sunshine-debian-trixie-arm64.deb
+    $ sudo apt install ./sunshine-*-arm64.deb
+    $ nohup sunshine >/dev/null 2>&1 &
+    open "https://127.0.0.1:47990/config", click "Advanced",  change "Force a Specific Capture Method" to "X11", click "Save", click "Apply"
+
 <div align="center">
   <img src="sunshine.png"  alt="Sunshine icon"/>
   <h1 align="center">Sunshine</h1>
