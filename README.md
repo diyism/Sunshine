@@ -41,8 +41,15 @@
     Ctrl+Alt+Shift+Q to quit
     Ctrl+Alt+Shift+X 缩小窗口
 
+    ssh到远端设置管理密码:
+    $ sunshine --creds sunshine <密码>
+    如果报错 Error: Couldn't read user credentials, 需要:
+    $ sudo systemctl stop sunshine 2>/dev/null
+    $ rm -f ~/.config/sunshine/sunshine_state.json
+    $ sunshine --creds sunshine <密码>
+
     用 http://<tailscale ip>:47990 进入远端填入PIN授权会被拒绝, 可以用ssh直接进入远端执行curl来授权:
-    $ curl -k -X POST https://localhost:47990/api/pin -u "sunshine:<密码>" -H "Content-Type: application/json" -d '{"pin":"3071"}'
+    $ curl -k -X POST https://localhost:47990/api/pin -u "sunshine:<密码>" -H "Content-Type: application/json" -d '{"pin":"9136","name":"debian1"}'
 
 <div align="center">
   <img src="sunshine.png"  alt="Sunshine icon"/>
